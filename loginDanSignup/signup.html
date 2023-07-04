@@ -1,0 +1,75 @@
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="css/styles2.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/x-icon" href="/assets/game-console.png" />
+    
+</head>
+<body>
+
+  <form action="login.html" onsubmit="return cekSignup(event)">
+  
+    <h1>Sign Up</h1>
+    
+    <fieldset>
+      <legend><span class="number">1</span>Your basic info</legend>
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="user_name">
+      
+      <label for="mail">Email:</label>
+      <input type="email" id="mail" name="user_email">
+      
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="user_password">
+      
+      <label>Age:</label>
+      <input type="radio" id="under_13" value="under_13" name="user_age"><label for="under_13" class="light">Under 17</label><br>
+      <input type="radio" id="over_13" value="over_13" name="user_age"><label for="over_13" class="light">17 or older</label>
+    </fieldset>
+    
+    <fieldset>
+      <legend><span class="number">2</span>Your profile</legend>
+      <label for="address">Address:</label>
+      <textarea id="address" name="user_address"></textarea>
+    </fieldset>
+    <fieldset>
+    <label for="job">Job Role:</label>
+    <select id="job" name="user_job">
+      <optgroup label="Role Playing Game">
+        <option value="single_player">Single Player</option>
+        <option value="dual_player">Dual Player</option>
+        <option value="group_player">Group Player</option>
+      </optgroup>
+      <optgroup label="First Person Shooter">
+        <option value="single_player">Single Player</option>
+        <option value="dual_player">Dual Player</option>
+        <option value="group_player">Group Player</option>
+      </optgroup>
+      <optgroup label="Fighting Game">
+        <option value="single_player">Single Player</option>
+        <option value="dual_player">Dual Player</option>
+        <option value="group_player">Group Player</option>
+      </optgroup>
+      <optgroup label="Strategy">
+        <option value="single_player">Single Player</option>
+        <option value="dual_player">Dual Player</option>
+        <option value="group_player">Group Player</option>
+      </optgroup>
+    </select>
+    
+      <label>Interests:</label>
+      <input type="checkbox" id="Action" value="interest_Action" name="user_interest"><label class="light" for="Action">Action</label><br>
+        <input type="checkbox" id="Fighting" value="interest_Fighting" name="user_interest"><label class="light" for="Fighting">Fighting</label><br>
+      <input type="checkbox" id="Advanture" value="interest_Advanture" name="user_interest"><label class="light" for="Advanture">Advanture</label>
+    
+    </fieldset>
+    <a href="index.html">
+    <button type="submit">Sign Up</button>
+  </a>
+  </form>
+  
+  <script src="js/script.js"></script>
+</body>
+</html>
