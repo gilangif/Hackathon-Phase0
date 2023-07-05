@@ -1,3 +1,23 @@
+const team =
+  "Hello from Hackstore,Our team:,Gilang Idul Fitri,Yusuf Bahrudin Nizar,David Wijaya,Mijel Fernando,Thanks for visit!,Happy Gaming !";
+const el = document.querySelector("span");
+
+let count = 0;
+
+const typing = setInterval(() => {
+  if (team[count] === ",") {
+    el.innerHTML = "";
+  } else {
+    el.innerHTML += team[count];
+  }
+
+  console.log(team[count]);
+  if (count === team.length - 1) {
+    clearInterval(typing);
+  }
+  count++;
+}, 80);
+
 //
 //
 // restore all data
@@ -18,10 +38,10 @@ document.getElementById("restore").addEventListener("click", () => {
         title: "Subway Surfer",
         author: "SYBO Games",
         about: `- Enter a world full of fantasy with the Subway Surfers World Tour Fantasy Fest
-  <br>- New feature alert! We're placing Subway Surfers stories into your hands with Subway Studio - capture, create and share!
-  <br>- Alfie joins the crew on his powered-up Big Boss Board - find them in the Season Hunt.
-  <br>- Trym gets a new look - collect Event Coins and unlock his Noble Newbie Outfit, plus lots more exciting content.
-  <br>- Participate in challenging events in Oxford, Greece, Mumbai and Las Vegas.`,
+  - New feature alert! We're placing Subway Surfers stories into your hands with Subway Studio - capture, create and share!
+  - Alfie joins the crew on his powered-up Big Boss Board - find them in the Season Hunt.
+  - Trym gets a new look - collect Event Coins and unlock his Noble Newbie Outfit, plus lots more exciting content.
+  - Participate in challenging events in Oxford, Greece, Mumbai and Las Vegas.`,
         thumb:
           "https://play-lh.googleusercontent.com/ltRo8DeZ7zV4FHx-QCwWu05aL8V-QhnQoJ-ZLdAWLxiNff7L_ezVyl9HiCN2VR4Vxg=w1052-h592-rw",
         background:
@@ -80,7 +100,8 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "FIFA Soccer",
         author: "Electronic Arts",
-        about: ``,
+        about:
+          "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!",
         thumb:
           "https://play-lh.googleusercontent.com/MUc561H_AeA4lUfUzyo0-6ZgikC6xrblMMPcbOTNC61iXb9hbfV9guj5IKiXAMfpumJw=w480-h960-rw",
         background:
@@ -90,7 +111,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Genshin Impact",
         author: "Mihoyo",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/QZ7t5aC4biLc2BwEOKw4vtLPcgo5IWmsi394v_LRxJFrbzOLWjkecSS95lQMe7zZXi5W=w1052-h592-rw",
         background:
@@ -100,7 +121,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Angry Birth Dream Blast",
         author: "Rovio Entertaiment",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/7uH2vasKk4ZFST6SaTfLa1_LNlrbn_cVvO9QUqloqRuKEUSRX9rBwzSwjRV-SlUKwA=w1052-h592-rw",
         background:
@@ -110,7 +131,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Chess - Play and Learn",
         author: "Chess.com",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/eSq1iIxJM1KaChURI31uT3jqXtAOR9bUQuXbxy_9v4N8sERXfY_MqXn9IAEUJ-6KVcAR=w1052-h592-rw",
         background:
@@ -120,7 +141,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Sudoku",
         author: "Kidult Lovin",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/hYLElG0RAgn60XE6cfgsPPW_JB63PEVWvDtvhipAGvTpxBX5YgLGt3UXvnJ_kRwKhnE=w480-h960-rw",
         background:
@@ -130,7 +151,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Call od Duty Mobile",
         author: "Ya ndak tau lah kok tanya saya",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/WjXoRzJKWHJ_x52qWYA6ECM70bq3x0vwwYiBhzLXdOIHCo-obdUTztPbskEn0K8_wBs=w480-h960-rw",
         background:
@@ -139,7 +160,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Goddess of Victory",
         author: "Level Infinite",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/PnQbNAd2ZAqMwkpzBW0hAI1xaFQouTO0kc6IFEpGOv1ZLfddoR5wMhRZLzRkcgbF7g=w1052-h592-rw",
         background: "https://i.ytimg.com/vi/dyoRWt9yx2I/hqdefault.jpg",
@@ -147,7 +168,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Dr. Driving",
         author: "SUD Inc",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/n2CFe-E4Kqoi9vwOHnXKg-Vno0Pod-NoJuYjgLQXcGGbToiA0_feC6a7LIBDB5xVvA=w1052-h592-rw",
         background:
@@ -156,7 +177,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Plant vs Zombie",
         author: "Electronic Arts",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/hO7716hh7NCcFauJedDclX-R3Zh9JmbSs8AUU6TP2edGVILlZM7gmyt_8WPCZELiPQA=w480-h960-rw",
         background:
@@ -165,7 +186,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Pou",
         author: "Zakeh",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/MNOy5QOdhAb8MUrsKd6fYyQGLgZNrKItS31ksNXJoqDfe6WwslnPsszMc5fsFTUIPok=w1052-h592-rw",
         background:
@@ -174,7 +195,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Sonic",
         author: "SEGA",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb: "https://i.ytimg.com/vi/_fBXsBDIvtA/hqdefault.jpg",
         background:
           "https://play-lh.googleusercontent.com/zgsYaRpr_igs1GfOq9FarZg18OwlvqJ5yU78saHUz8ssMQnrnO0CGPwIZmp_qu8X6El5=w1052-h592-rw",
@@ -182,7 +203,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Super Mario Run",
         author: "Nitendo",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/e5HMIP0FW9MCoAEGYzji9JsrvyovpZ3StHiIANughp3dovUxdv_eHiYT5bMz38bowOI=w1052-h592-rw",
         background: "https://i.ytimg.com/vi/qjHSn4GwQWY/hqdefault.jpg",
@@ -191,7 +212,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Talking Tom Cat",
         author: "Outfit7 Limited",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/fyNQbmN9u8uSaea17aq3X7OoeADQ23aZ7Beo06TX6-j6DbAvdn9uC7orI7bVf9j1Xw=w1052-h592-rw",
         background:
@@ -200,7 +221,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Real Racing 3",
         author: "Electronic Arts",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/BxaaEt1fL0ATQ2IidQt6hnkfXfj-IP0v-621oAfK62cy352kCB9eWuwLm4tcqkZriz0=w1052-h592-rw",
         background:
@@ -209,7 +230,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Freecell",
         author: "Solebon LCC",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/DAog8qM3sgbrACVAsogygPnP9wLBoGnx2wwVouNvhSXmsP5PdKkKb2sXqHXxReXXZUY=w1052-h592-rw",
         background:
@@ -218,7 +239,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "8 Ball Pool",
         author: "Miniclip.com",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/bPz1guJ6FHF3oIOEy3KqwpaDDKO-hLRaZoyzmM8bLFLN8fWm6L0_EuUnkwv9iqPo3Ag=w480-h960-rw",
         background:
@@ -227,7 +248,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Golf Rival",
         author: "Znga",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/kefWpju0GFiejaEZN3afqyZPj_Yv2n31CUIUFl_biV-OF0kL5IDPoHEaHAwpTTgWgw=w1052-h592-rw",
         background:
@@ -236,7 +257,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Ping Pong Fury",
         author: "Yakuto",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/28ganb16BBEdV3L12Ns6xIqUbwgDCfe2pNnVco91tWAz41KRINYH4-gUqVEOTnb37ZE=w1052-h592-rw",
         background:
@@ -245,7 +266,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Basketball Star",
         author: "Miniclip.com",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/bTRRevO3q15YuqGz5Wbvd_O1MK4zQQuc0Gl980yrQO7B0rfPA-KHHMAqN_qLfJKOsw=w1052-h592-rw",
         background:
@@ -254,7 +275,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "GTA San Andreas",
         author: "Rockstar",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/XRlCpj22PFJuFK43QcE3u5RxmoNUed7YO_zG-6F1PCqjrBIIURbTBDvTgLVVIk5pNeY=w480-h960-rw",
         background:
@@ -264,7 +285,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Bully",
         author: "Rockstar",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/I3zJDMIIQ6k_iRCC8LsZJhAKbKC8I7f4Mp1lYdZ8Hxk3hvBS1GLsBsmiG80gk5T0c9Ww=w480-h960-rw",
         background:
@@ -273,7 +294,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Hitman Sniper",
         author: "CDE Entertaiment",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/t8VJAWO7ioG9uGhkPOs7q7ZfKjigeMGFBq134VJKLVU_jKDn9VEz9Oqg1iXQ9axI7aE=w480-h960-rw",
         background:
@@ -282,7 +303,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Ludo King",
         author: "Gamation Global",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/g5vtK2Zf55-YRm5RUwF8KGgyZBcmgjI9YzDX1VswfphnZnu4fSxVJGjzkTvVuhdkNg=w1052-h592-rw",
         background:
@@ -291,7 +312,7 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Monopoly Go",
         author: "Scopely",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/7M9FYlUnscfJQZqHE4Yz2HNEzESl3QOUEVAOD3YzC32HuMsbropV8h_tPpaNdRmqrA=w480-h960-rw",
         background:
@@ -300,15 +321,13 @@ document.getElementById("restore").addEventListener("click", () => {
       {
         title: "Flappy Bird",
         author: "ShinCom",
-        about: ``,
+        about: `Lorem ipsum dolor, sit amet consectetur adipisicing elit. Laboriosam nostrum quidem consectetur dolore harum autem voluptatibus fugiat ipsa quasi. Vitae delectus numquam provident possimus. Voluptates nobis enim unde quis reiciendis!`,
         thumb:
           "https://play-lh.googleusercontent.com/miAaBeF2TbRNWFUEGyFRERzffOvwN1sNY2JZXEy6DcXxqrQu_C76T3fO9Q1FX7wZUQw=w480-h960-rw",
         background:
           "https://play-lh.googleusercontent.com/miAaBeF2TbRNWFUEGyFRERzffOvwN1sNY2JZXEy6DcXxqrQu_C76T3fO9Q1FX7wZUQw=w480-h960-rw",
       },
     ];
-
-    localStorage.clear();
 
     for (const x of data) {
       let id = "gilangif" + Math.ceil(Math.random() * 99999999999999999);
@@ -565,23 +584,3 @@ if (id && data) {
 
   document.title = "Hackstore";
 }
-
-const team =
-  "Hello from Hackstore,Our team:,Gilang Idul Fitri,Yusuf Bahrudin Nizar,David Wijaya,Mijel Fernando,Thanks for visit!,Happy Gaming !";
-const el = document.querySelector("span");
-
-let count = 0;
-
-const typing = setInterval(() => {
-  if (team[count] === ",") {
-    el.innerHTML = "";
-  } else {
-    el.innerHTML += team[count];
-  }
-
-  console.log(team[count]);
-  if (count === team.length - 1) {
-    clearInterval(typing);
-  }
-  count++;
-}, 120);
