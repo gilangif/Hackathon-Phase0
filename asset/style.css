@@ -4,6 +4,8 @@
     }
 }
 
+
+
 html,
 body {
     border: 0px;
@@ -11,7 +13,7 @@ body {
     padding: 0px;
     color: rgba(255, 255, 255, 0.993);
     font-family: 'Comfortaa', cursive;
-    background: rgba(0, 0, 0, 0.938) url(./asset/img/background.jpg");
+    background: rgba(0, 0, 0, 0.938) url("./img/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     animation: coba 0.5s;
@@ -39,11 +41,19 @@ a:link {
 
 }
 
+span {
+    font-size: 3rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.527);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
 .box-list-title {
     width: 100%;
     margin: 0px 20px 20px 35px;
     font-weight: bold;
-    font-size: 0.8rem;
 }
 
 .box-list {
@@ -157,7 +167,7 @@ a:link {
 }
 
 .delete {
-    background-color: rgba(218, 142, 2, 0.849);
+    background-color: rgba(218, 2, 2, 0.849);
     color: rgb(255, 255, 255);
 }
 
@@ -165,6 +175,18 @@ a:link {
     background-color: rgba(48, 187, 6, 0.849);
     color: rgb(255, 255, 255);
     width: 170px;
+}
+
+.remove {
+    background-color: rgba(187, 6, 163, 0.849);
+    color: rgb(255, 255, 255);
+    width: 100px;
+}
+
+.restore {
+    background-color: rgba(6, 145, 187, 0.849);
+    color: rgb(255, 255, 255);
+    width: 100px;
 }
 
 @keyframes show {
@@ -303,8 +325,20 @@ textarea {
 .cancel {
     margin-top: 0px;
     border: none;
-    background-color: rgb(197, 101, 11);
+    background-color: rgb(197, 11, 11);
     color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.507);
+    
+}
+
+
+.update {
+    margin-top: 0px;
+    border: none;
+    background-color: rgb(173, 171, 5);
+    color: black;
     font-weight: bold;
     border-radius: 10px;
     box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.507);
