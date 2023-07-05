@@ -566,21 +566,22 @@ if (id && data) {
   document.title = "Hackstore";
 }
 
-const team = ["Gilang IF", "Yusuf", "David Wijaya", "Mijel"];
+const team =
+  "Hello from Hackstore,Our team:,Gilang Idul Fitri,Yusuf Bahrudin Nizar,David Wijaya,Mijel Fernando,Thanks for visit!,Happy Gaming !";
 const el = document.querySelector("span");
 
-let count = 500;
+let count = 0;
 
-team.forEach((x) => {
-  let count = 0;
+const typing = setInterval(() => {
+  if (team[count] === ",") {
+    el.innerHTML = "";
+  } else {
+    el.innerHTML += team[count];
+  }
 
-  const write = setInterval(() => {
-    if (count !== x.length) {
-      el.innerHTML += x.charAt(count);
-      console.log(x.charAt(count));
-      count++;
-    } else {
-      clearInterval(write);
-    }
-  }, 80);
-});
+  console.log(team[count]);
+  if (count === team.length - 1) {
+    clearInterval(typing);
+  }
+  count++;
+}, 120);
