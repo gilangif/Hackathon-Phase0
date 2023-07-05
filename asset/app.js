@@ -31,7 +31,9 @@ const showList = () => {
 
 showList();
 
-// add button
+//
+//
+// add new data button
 document.querySelector("#add").addEventListener("click", () => {
   const box = document.querySelector(".box-edit");
   const container = document.querySelector(".container");
@@ -41,24 +43,65 @@ document.querySelector("#add").addEventListener("click", () => {
   container.classList.toggle("blur");
 });
 
-// delete game action button
-document.getElementById("delete").addEventListener("click", () => {
-  let games = [...document.querySelectorAll(".game")];
+//
+//
+// edit game action
+document.getElementById("edit").addEventListener("click", () => {
+  console.log("edit mode!");
+
+  let box = document.querySelector(".box-edit");
+  let container = document.querySelector(".container");
+  let title = document.getElementById("inputTitle");
+  let author = document.getElementById("inputAuthor");
+  let thumb = document.getElementById("imgThumbEdit");
+  let background = document.getElementById("imgBackgroundEdit");
+  let about = document.getElementById("inputAbout");
 
   let url = new URL(window.location.href);
   let id = url.searchParams.get("id");
 
-  games.map((el) => {
-    let list = el.getAttribute("productid");
+  let game = JSON.parse(localStorage.getItem(id))
 
-    if (list === id) {
-      el.remove();
-      localStorage.removeItem(id);
-      window.location.assign(window.location.origin + window.location.pathname);
-    }
-  });
+  title.value = game.title
+  author.value = game.author
+  thumb.src = game.thumb
+  background.src = game.background
+  about.value = game.about
+
+  console.log(thumb);
+
+  box.classList.toggle("show");
+  container.classList.toggle("grayscale");
+  container.classList.toggle("blur");
 });
 
+//
+//
+// delete game action button
+document.getElementById("delete").addEventListener("click", () => {
+  const prompt = confirm("Delete this data?");
+
+  let games = [...document.querySelectorAll(".game")];
+  let url = new URL(window.location.href);
+  let id = url.searchParams.get("id");
+
+  if (prompt) {
+    games.map((el) => {
+      let list = el.getAttribute("productid");
+
+      if (list === id) {
+        el.remove();
+        localStorage.removeItem(id);
+        window.location.assign(
+          window.location.origin + window.location.pathname
+        );
+      }
+    });
+  }
+});
+
+//
+//
 // add button on edit box
 document.querySelector("#tambah").addEventListener("click", () => {
   const title = document.getElementById("inputTitle").value;
@@ -75,7 +118,9 @@ document.querySelector("#tambah").addEventListener("click", () => {
   window.location.assign(window.location.origin + window.location.pathname);
 });
 
-// cancel on edit box
+//
+//
+// cancel on box
 document.querySelector("#cancel").addEventListener("click", () => {
   const box = document.querySelector(".box-edit");
   const container = document.querySelector(".container");
@@ -85,6 +130,8 @@ document.querySelector("#cancel").addEventListener("click", () => {
   container.classList.toggle("blur");
 });
 
+//
+//
 // url thumb onchage
 const thumbVal = document.getElementById("inputThumb");
 thumbVal.addEventListener("change", () => {
@@ -93,6 +140,8 @@ thumbVal.addEventListener("change", () => {
   thumb.src = thumbVal.value;
 });
 
+//
+//
 // url background onchage
 const backgroundVal = document.getElementById("inputBackground");
 backgroundVal.addEventListener("change", () => {

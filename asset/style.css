@@ -11,7 +11,7 @@ body {
     padding: 0px;
     color: rgba(255, 255, 255, 0.993);
     font-family: 'Comfortaa', cursive;
-    background: rgba(0, 0, 0, 0.938) url("./asset/img/background.jpg");
+    background: rgba(0, 0, 0, 0.938) url(./asset/img/background.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     animation: coba 0.5s;
