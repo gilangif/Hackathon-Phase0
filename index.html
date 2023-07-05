@@ -43,12 +43,12 @@
         </div>
         <div class="box-preview">
 
-            <img src="" alt="Memories of murder thumb" class="img-preview">
-            <p class="img-preview-title">JUDUL</p>
+            <img src="./asset/img/thumb.jpg" class="img-preview">
+            <p class="img-preview-title">data not available</p>
 
-            <input type="submit" id="edit"  class="btn edit" value="edit" onclick="editGame()">
+            <input type="submit" id="edit" class="btn edit" value="edit">
             <input type="submit" id="delete" class="btn delete" value="delete" onclick="deleteGame()">
-            <input type="submit" class="btn chart" value="add to chart">
+            <input type="submit" id="add" class="btn chart" value="add new data">
 
 
         </div>
@@ -61,7 +61,31 @@
 
     <div class="box-edit">
         <div class="box-edit-content">
-            <img src="./asset/img/1_thumb.jpg" alt="" class="img-preview">
+
+
+            <div class="edit-left">
+                <div class="wrapper-potrait">
+                    <img id="imgThumbEdit" src="./asset/img/thumb.jpg" alt="" class="img-edit-potrait">
+                </div>
+                <div class="wrapper">
+                    <img id="imgBackgroundEdit" src="./asset/img/background.jpg" alt="" class="img-edit">
+                </div>
+            </div>
+            <div class="edit-right">
+
+                <h1>add Data!</h1>
+
+                <input type="text" id="inputTitle" placeholder="Title">
+                <input type="text" id="inputAuthor" placeholder="Author">
+                <input type="text" id="inputThumb" placeholder="Image thumb url">
+                <input type="text" id="inputBackground" placeholder="Image background url">
+                <textarea id="inputAbout"></textarea>
+                <input type="submit" id="tambah" value="add" class="add">
+                <input type="submit" id="cancel" value="cancel" class="cancel">
+
+
+
+            </div>
         </div>
     </div>
 
