@@ -4,13 +4,16 @@
     }
 }
 
+
+
 html,
 body {
     border: 0px;
     margin: 0px;
+    padding: 0px;
     color: rgba(255, 255, 255, 0.993);
     font-family: 'Comfortaa', cursive;
-    background: rgba(0, 0, 0, 0.938) url("./asset/img/4.jpg");
+    background: rgba(0, 0, 0, 0.938) url("https://wallpapers.com/images/featured/4k-bike-p5ztqfie3vnj5kkp.webp");
     background-repeat: no-repeat;
     background-size: cover;
     animation: coba 0.5s;
@@ -38,11 +41,19 @@ a:link {
 
 }
 
+span {
+    font-size: 2rem;
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: rgba(0, 0, 0, 0.527);
+    padding: 10px 20px;
+    border-radius: 20px;
+}
+
 .box-list-title {
     width: 100%;
     margin: 0px 20px 20px 35px;
     font-weight: bold;
-    font-size: 0.8rem;
 }
 
 .box-list {
@@ -156,7 +167,7 @@ a:link {
 }
 
 .delete {
-    background-color: rgba(218, 142, 2, 0.849);
+    background-color: rgba(218, 2, 2, 0.849);
     color: rgb(255, 255, 255);
 }
 
@@ -164,6 +175,18 @@ a:link {
     background-color: rgba(48, 187, 6, 0.849);
     color: rgb(255, 255, 255);
     width: 170px;
+}
+
+.remove {
+    background-color: rgba(187, 6, 163, 0.849);
+    color: rgb(255, 255, 255);
+    width: 100px;
+}
+
+.restore {
+    background-color: rgba(6, 145, 187, 0.849);
+    color: rgb(255, 255, 255);
+    width: 100px;
 }
 
 @keyframes show {
@@ -179,6 +202,7 @@ a:link {
 }
 
 .box-edit {
+    background: rgb(0, 0, 0, 0.6);
     color: black;
     width: 100vw;
     height: 100vh;
@@ -186,20 +210,20 @@ a:link {
     top: 0;
     display: none;
     padding: 20px;
+    margin: 0;
 }
 
 .box-edit-content {
     animation: show 0.8s;
-    width: 50%;
-    height: 50%;
-    background-color: rgb(255, 255, 255);
+    width: 70%;
+    height: 70%;
+    /* background-color: rgb(255, 255, 255); */
     position: absolute;
-    top: 20%;
-    left: 25%;
-    right: 25%;
+    top: 10%;
+    left: 15%;
+    right: 15%;
     border-radius: 18px;
-    padding: 20px;
-    box-shadow: 3px 2px 30px rgb(0, 0, 0);
+    display: flex;
 }
 
 .show {
@@ -218,6 +242,108 @@ a:link {
     filter: grayscale(100%);
 }
 
+
+.edit-left {
+    /* background-color: rgb(170, 255, 0); */
+    width: 50%;
+}
+
+.edit-right {
+    /* background-color: yellow; */
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    width: 40%;
+}
+
+.wrapper {
+    background-color: white;
+    height: 300px;
+    width: 500px;
+    position: absolute;
+    top: 45%;
+    left: 6%;
+    border-radius: 15px;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.507);
+    padding: 5px;
+    z-index: 999;
+
+}
+
+.wrapper-potrait {
+    padding: 5px;
+    background-color: white;
+    height: 600px;
+    position: absolute;
+    border-radius: 15px;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.507);
+
+}
+
+.img-edit {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+
+}
+
+.img-edit-potrait {
+    width: 320px;
+    height: 600px;
+    object-fit: cover;
+}
+
+
+input {
+    width: 400px;
+    height: 40px;
+    margin: 10px 0px;
+    padding-left: 10px;
+    border-radius: 6px;;
+}
+
+textarea {
+    width: 400px;
+    height: 200px;
+    margin: 10px 0px;
+    resize: none;
+    padding-left: 10px;
+
+}
+
+.add {
+    border: none;
+    background-color: rgb(9, 129, 15);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.507);
+    
+}
+
+.cancel {
+    margin-top: 0px;
+    border: none;
+    background-color: rgb(197, 11, 11);
+    color: white;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.507);
+    
+}
+
+
+.update {
+    margin-top: 0px;
+    border: none;
+    background-color: rgb(173, 171, 5);
+    color: black;
+    font-weight: bold;
+    border-radius: 10px;
+    box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.507);
+    
+}
 /* @media screen and (max-width: 800px) {
     .container {
         background: red;
