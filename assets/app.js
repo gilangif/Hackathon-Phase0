@@ -1,3 +1,28 @@
+//
+//
+// check session
+
+
+if (sessionStorage.getItem("login") !== "true") {
+  alert("You must login first!")
+  window.location.assign("login.html");
+}
+
+//
+//
+// check role
+if (sessionStorage.getItem("login") == "true" && sessionStorage.getItem("role") === "user") {
+  
+  document.getElementById("edit").style.display = "none"
+  document.getElementById("delete").style.display = "none"
+  document.getElementById("add").style.display = "none"
+  document.getElementById("restore").style.display = "none"
+  document.getElementById("remove").style.display = "none"
+}
+
+//
+//
+// message
 const team =
   "Hello from Hackstore,Our team:,Gilang Idul Fitri,Yusuf Bahrudin Nizar,David Wijaya,Mijel Fernando,Thanks for visit!,Happy Gaming !";
 const el = document.querySelector("span");
@@ -11,7 +36,6 @@ const typing = setInterval(() => {
     el.innerHTML += team[count];
   }
 
-  console.log(team[count]);
   if (count === team.length - 1) {
     clearInterval(typing);
   }
