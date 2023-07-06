@@ -351,6 +351,7 @@ textarea {
     height: 50px;
     top: 92%;
     left: 95%;
+    position: absolute;
 
 }
 
