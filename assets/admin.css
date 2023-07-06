@@ -70,7 +70,7 @@ span {
     /* width: 150px; */
     height: 330px;
     margin: 10px 0px 20px 20px;
-    border-radius: 8px 8px 30px 30px;
+    border-radius: 8px;
     text-align: center;
     box-sizing: border-box;
     padding: 5px 7px;
@@ -309,7 +309,6 @@ textarea {
     margin: 10px 0px;
     resize: none;
     padding-left: 10px;
-
 }
 
 .add {
