@@ -1,23 +1,36 @@
 //
 //
+// logout
+document.getElementById("logout").addEventListener("click", () => {
+  let prompt = confirm("Logout?");
+
+  if (prompt) {
+    sessionStorage.clear();
+    window.location.assign("login.html");
+  }
+});
+
+//
+//
 // check session
 
-
 if (sessionStorage.getItem("login") !== "true") {
-  alert("You must login first!")
+  alert("You must login first!");
   window.location.assign("login.html");
 }
 
 //
 //
 // check role
-if (sessionStorage.getItem("login") == "true" && sessionStorage.getItem("role") === "user") {
-  
-  document.getElementById("edit").style.display = "none"
-  document.getElementById("delete").style.display = "none"
-  document.getElementById("add").style.display = "none"
-  document.getElementById("restore").style.display = "none"
-  document.getElementById("remove").style.display = "none"
+if (
+  sessionStorage.getItem("login") == "true" &&
+  sessionStorage.getItem("role") === "user"
+) {
+  document.getElementById("edit").style.display = "none";
+  document.getElementById("delete").style.display = "none";
+  document.getElementById("add").style.display = "none";
+  document.getElementById("restore").style.display = "none";
+  document.getElementById("remove").style.display = "none";
 }
 
 //
