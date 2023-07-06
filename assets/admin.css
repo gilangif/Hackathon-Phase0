@@ -13,7 +13,7 @@ body {
     padding: 0px;
     color: rgba(255, 255, 255, 0.993);
     font-family: 'Comfortaa', cursive;
-    background: rgba(0, 0, 0, 0.938) url("https://wallpapers.com/images/featured/4k-bike-p5ztqfie3vnj5kkp.webp");
+    background: rgba(0, 0, 0, 0.938) url("https://images.pexels.com/photos/3165335/pexels-photo-3165335.jpeg?cs=srgb&dl=pexels-lucie-liz-3165335.jpg&fm=jpg");
     background-repeat: no-repeat;
     background-size: cover;
     animation: coba 0.5s;
@@ -300,7 +300,8 @@ input {
     height: 40px;
     margin: 10px 0px;
     padding-left: 10px;
-    border-radius: 6px;;
+    border-radius: 6px;
+    ;
 }
 
 textarea {
@@ -318,7 +319,7 @@ textarea {
     font-weight: bold;
     border-radius: 10px;
     box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.507);
-    
+
 }
 
 .cancel {
@@ -329,7 +330,7 @@ textarea {
     font-weight: bold;
     border-radius: 10px;
     box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.507);
-    
+
 }
 
 
@@ -341,7 +342,7 @@ textarea {
     font-weight: bold;
     border-radius: 10px;
     box-shadow: 2px 3px 6px rgba(0, 0, 0, 0.507);
-    
+
 }
 
 
@@ -350,7 +351,7 @@ textarea {
     height: 50px;
     top: 92%;
     left: 95%;
-    
+
 }
 
 #logout:hover {
