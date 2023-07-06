@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>GilangIF sample</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/game-console.png" />
+
     <link rel="stylesheet" href="./assets/admin.css" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
@@ -15,6 +17,8 @@
 
 <body>
     <div class="container">
+
+        <img src="./assets/img/switch.png" alt="" id="logout">
         <div class="list">
             <div class="box-list-title">
                 <span id="top"></span>
@@ -23,7 +27,8 @@
             <div class="box-list"></div>
         </div>
         <div class="box-preview">
-            <img src="https://www.bypeople.com/wp-content/uploads/2016/03/2016-03-10_17-04-10.gif" class="img-preview" />
+            <img src="https://www.bypeople.com/wp-content/uploads/2016/03/2016-03-10_17-04-10.gif"
+                class="img-preview" />
             <p class="img-preview-title">404</p>
 
             <input type="submit" id="edit" class="btn edit" value="edit" />
@@ -55,10 +60,20 @@
                 <input type="submit" id="tambah" value="add" class="add" />
                 <input type="submit" id="update" value="update" class="update" />
                 <input type="submit" id="cancel" value="cancel" class="cancel" />
+
             </div>
         </div>
     </div>
 
+    <audio id="music">
+        <source src="./assets/sound.mpeg" type="audio/mpeg" />
+    </audio>
+    <script>
+        window.addEventListener("load", () => {
+            console.log("jalan");
+            document.getElementById("music").play()
+        })
+    </script>
     <script src="./assets/app.js"></script>
 </body>
 
