@@ -31,7 +31,8 @@ if (
   document.getElementById("add").style.display = "none";
   document.getElementById("restore").style.display = "none";
   document.getElementById("remove").style.display = "none";
-}
+} 
+
 
 //
 //
@@ -621,3 +622,58 @@ if (id && data) {
 
   document.title = "Hackstore";
 }
+document.getElementById("chart").addEventListener("click", () => {
+  const title = document.querySelector(".img-preview-title");
+  console.log(title.innerText);
+
+  var randomPrice = Math.random() * 50; // Generates a random price between 0 and 50
+
+  var cartItem = {
+    title: title.innerText,
+    price: randomPrice
+  };
+  var cartItemJSON = JSON.stringify(cartItem);
+
+  var cartArray = new Array();
+  // If the JavaScript shopping cart session is not empty
+  if (sessionStorage.getItem('shopping-cart')) {
+    cartArray = JSON.parse(sessionStorage.getItem('shopping-cart'));
+  }
+  cartArray.push(cartItemJSON);
+
+  var cartJSON = JSON.stringify(cartArray);
+  sessionStorage.setItem('shopping-cart', cartJSON);
+  console.log(cartArray);
+
+  var listchart = document.getElementById("listchart");
+  listchart.innerHTML = ""; // Clear the list before adding items
+
+  var totalPrice = 0; // Initialize total price to 0
+
+  cartArray.forEach((itemJSON) => {
+    var item = JSON.parse(itemJSON);
+    var li = document.createElement("li");
+    li.textContent = item.title + " - Price: $" + item.price.toFixed(2); // Display the item price
+    listchart.appendChild(li);
+    totalPrice += item.price; // Accumulate the item price in the total price
+  });
+
+  var itemCount = cartArray.length;
+  console.log("Number of Items: " + itemCount);
+  var listHeading = document.getElementById("list");
+  listHeading.textContent = "Number of Items: " + itemCount + " - Total Price: $" + totalPrice.toFixed(2); // Display the total price
+
+  var chartButton = document.getElementById("chart");
+  chartButton.textContent = "Chart ($" + totalPrice.toFixed(2) + ")"; // Update the chart button label with the total price
+});
+
+document.getElementById("reset").addEventListener("click", () => {
+  sessionStorage.removeItem('shopping-cart'); // Remove the 'shopping-cart' session storage item
+  console.log("Cart reset");
+
+  var listchart = document.getElementById("listchart");
+  listchart.innerHTML = ""; // Clear the list
+
+  var listHeading = document.getElementById("list");
+  listHeading.textContent = "Number of Items: 0 - Total Price: $0.00"; // Set the total price to 0
+});
